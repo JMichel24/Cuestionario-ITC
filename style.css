@@ -207,6 +207,14 @@ h1, h2, h3, h4 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -286,8 +294,7 @@ h1, h2, h3, h4 {
    ========================================================================== */
 .widget-wrapper {
   width: 100%;
-  max-width: 900px;
-  margin-bottom: 80px;
+  max-width: 600px;
 }
 
 .widget-card {
@@ -407,7 +414,8 @@ h1, h2, h3, h4 {
   background-color: #FFFFFF;
   border: 2px solid rgba(43, 27, 23, 0.08);
   border-radius: var(--radius-md);
-  padding: 20px 24px;
+  padding: 12px 15px;
+  height: auto;
   cursor: pointer;
   text-align: left;
   font-family: var(--font-interface);
