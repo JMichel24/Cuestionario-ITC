@@ -427,7 +427,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 36,
-    question: "¿Cuántas onzas de leche lleva un Iced coffee?",
+    question: "¿Cuántas onzas de leche lleva un Iced latte?",
     options: [
       "4 onzas el chico y 6 onzas el grande",
       "3 onzas el chico y 5 onzas el grande",
@@ -579,20 +579,20 @@ document.addEventListener("DOMContentLoaded", () => {
   heroSection = document.getElementById("hero-section");
   widgetWrapper = document.getElementById("widget-wrapper");
   resultsDashboard = document.getElementById("results-dashboard");
-  
+
   progressFill = document.getElementById("progress-fill");
   currentProgressText = document.getElementById("current-progress-text");
   questionNumText = document.getElementById("question-num");
-  
+
   questionText = document.getElementById("question-text");
   optionsGrid = document.getElementById("options-grid");
-  
+
   feedbackPanel = document.getElementById("feedback-panel");
   feedbackHeader = document.getElementById("feedback-header");
   feedbackText = document.getElementById("feedback-text");
-  
+
   btnNext = document.getElementById("btn-next");
-  
+
   resultsScore = document.getElementById("results-score");
   resultsPercentage = document.getElementById("results-percentage");
   resultsBadge = document.getElementById("results-badge");
@@ -619,7 +619,7 @@ function showAuthForm() {
   setTimeout(() => {
     heroSection.style.display = "none";
     heroSection.classList.remove("fade-out");
-    
+
     const authSection = document.getElementById("auth-section");
     authSection.style.display = "flex";
     authSection.classList.add("fade-in");
@@ -630,15 +630,15 @@ function handleAuthSubmit(event) {
   event.preventDefault();
   nombreColaborador = document.getElementById("user-name").value.trim();
   franquicia = document.getElementById("user-branch").value.trim();
-  
+
   if (!nombreColaborador || !franquicia) return;
-  
+
   const authSection = document.getElementById("auth-section");
   authSection.classList.add("fade-out");
   setTimeout(() => {
     authSection.style.display = "none";
     authSection.classList.remove("fade-out");
-    
+
     // Start the evaluation exam
     startQuiz();
   }, 250);
@@ -650,18 +650,18 @@ function startQuiz() {
   score = 0;
   currentQuestionIndex = 0;
   hasAnswered = false;
-  
+
   // Generate efemeral session token (Anti-Copy logic)
   sessionToken = "exam_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);
   console.log(`[Exam Session Initialized] Token: ${sessionToken}`);
 
   // Choose 20 random unique questions from database
   activeQuestions = shuffleArray([...QUESTIONS_DATABASE]).slice(0, QUIZ_LENGTH);
-  
+
   // Display the quiz directly (no transition needed here as it was done in handleAuthSubmit)
   widgetWrapper.style.display = "flex";
   widgetWrapper.classList.add("fade-in");
-  
+
   // Render the first question
   renderQuestion();
 }
@@ -670,31 +670,31 @@ function renderQuestion() {
   hasAnswered = false;
   btnNext.disabled = true;
   feedbackPanel.style.display = "none";
-  
+
   const currentQuestion = activeQuestions[currentQuestionIndex];
-  
+
   // Update Header progress
   const progressPercent = Math.round((currentQuestionIndex / QUIZ_LENGTH) * 100);
   progressFill.style.width = `${progressPercent}%`;
   currentProgressText.innerText = `${progressPercent}%`;
   questionNumText.innerText = `PREGUNTA ${currentQuestionIndex + 1} DE ${QUIZ_LENGTH}`;
-  
+
   // Set question content
   questionText.innerText = currentQuestion.question;
-  
+
   // Render options
   optionsGrid.innerHTML = "";
-  
+
   // Map options keeping track of the correct answer (Double Randomization Layer)
   const mappedOptions = currentQuestion.options.map((opt, idx) => ({
     text: opt,
     isCorrect: idx === currentQuestion.correctIndex
   }));
-  
+
   // Shuffle options dynamically
   const shuffledOptions = shuffleArray([...mappedOptions]);
   const correctText = currentQuestion.options[currentQuestion.correctIndex];
-  
+
   shuffledOptions.forEach((opt, idx) => {
     const letter = String.fromCharCode(65 + idx); // A, B, C, D
     const card = document.createElement("button");
@@ -716,24 +716,24 @@ function renderQuestion() {
 function handleOptionSelection(selectedCard, isCorrect, correctText) {
   if (hasAnswered) return;
   hasAnswered = true;
-  
+
   const currentQuestion = activeQuestions[currentQuestionIndex];
   const allCards = optionsGrid.querySelectorAll(".option-card");
-  
+
   // Store user's choice and correct answers for PDF report
   currentQuestion.userAnswer = selectedCard.querySelector(".option-content").innerText;
   currentQuestion.isUserCorrect = isCorrect;
   currentQuestion.correctAnswerText = correctText;
-  
+
   // Disable all option cards
   allCards.forEach(card => card.classList.add("disabled"));
-  
+
   if (isCorrect) {
     // Correct selection
     selectedCard.classList.remove("disabled");
     selectedCard.classList.add("correct");
     score++;
-    
+
     // Show success feedback
     feedbackHeader.className = "feedback-header success";
     feedbackHeader.innerHTML = `
@@ -744,7 +744,7 @@ function handleOptionSelection(selectedCard, isCorrect, correctText) {
     // Incorrect selection
     selectedCard.classList.remove("disabled");
     selectedCard.classList.add("incorrect");
-    
+
     // Highlight the correct answer card for learning reinforcement
     allCards.forEach(card => {
       const cardContentText = card.querySelector(".option-content").innerText;
@@ -761,18 +761,18 @@ function handleOptionSelection(selectedCard, isCorrect, correctText) {
       Ajuste Requerido en Operaciones
     `;
   }
-  
+
   // Show manual explanation details
   feedbackText.innerText = currentQuestion.explanation;
   feedbackPanel.style.display = "block";
-  
+
   // Enable next action button
   btnNext.disabled = false;
 }
 
 function handleNextQuestion() {
   currentQuestionIndex++;
-  
+
   if (currentQuestionIndex < QUIZ_LENGTH) {
     // Go to next question
     renderQuestion();
@@ -786,20 +786,20 @@ function showResults() {
   // Update progress bar to full 100%
   progressFill.style.width = "100%";
   currentProgressText.innerText = "100%";
-  
+
   widgetWrapper.classList.add("fade-out");
   setTimeout(() => {
     widgetWrapper.style.display = "none";
     widgetWrapper.classList.remove("fade-out");
-    
+
     resultsDashboard.style.display = "flex";
     resultsDashboard.classList.add("fade-in");
-    
+
     // Set final scores and computed efficiency
     resultsScore.innerText = `${score} / ${QUIZ_LENGTH} Aciertos`;
     const percentage = Math.round((score / QUIZ_LENGTH) * 100);
     resultsPercentage.innerText = `${percentage}% de Eficiencia`;
-    
+
     // Static text layout
     resultsBadge.innerText = "📋";
     if (resultsTitle) resultsTitle.innerText = "Evaluación Completada";
@@ -812,7 +812,7 @@ function restartQuiz() {
   sessionToken = null;
   nombreColaborador = "";
   franquicia = "";
-  
+
   // Reset auth form input fields
   const form = document.getElementById("auth-form");
   if (form) form.reset();
@@ -821,7 +821,7 @@ function restartQuiz() {
   setTimeout(() => {
     resultsDashboard.style.display = "none";
     resultsDashboard.classList.remove("fade-out");
-    
+
     // Open main Intro Hero again
     heroSection.style.display = "flex";
     heroSection.classList.add("fade-in");
@@ -850,7 +850,7 @@ function setupSupportModal() {
 // Generate and download executive PDF audit report via window.print()
 function downloadPDF() {
   console.log("Iniciando impresión nativa del reporte...");
-  
+
   // 1. Crear hoja de estilos CSS temporal para la impresión (@media print)
   const style = document.createElement('style');
   style.id = 'print-style-temp';
@@ -887,7 +887,7 @@ function downloadPDF() {
     year: "numeric", month: "long", day: "numeric",
     hour: "2-digit", minute: "2-digit"
   });
-  
+
   const efficiency = Math.round((score / QUIZ_LENGTH) * 100);
 
   let questionsHTML = '';
