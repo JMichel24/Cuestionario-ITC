@@ -556,6 +556,114 @@ const QUESTIONS_DATABASE = [
     ],
     correctIndex: 0,
     explanation: "Estándar de Pay con Nutella: Lleva exactamente 20 gramos de Nutella."
+  },
+  {
+    id: "servicio_01",
+    question: "¿Cuál es el saludo de bienvenida oficial?",
+    options: [
+      "Hola, ¿qué le vamos a servir hoy?",
+      "Buenas tardes bienvenido a Italian Coffe",
+      "Bienvenidos a Italian Coffee Company, adelante",
+      "Buenas tardes, ¿gusta una mesa?"
+    ],
+    correctIndex: 1,
+    explanation: "ESTÁNDAR DE SERVICIO: Buenas tardes bienvenido a Italian Coffe"
+  },
+  {
+    id: "servicio_02",
+    question: "¿Cuál es el uniforme completo y correcto?",
+    options: [
+      "Playera con logotipo, mandil verde, pantalón de mezclilla azul y tenis negros cómodos.",
+      "Gorra verde con logotipo Italian Coffe, red para el cabello, camisa con logotipo en caso de ser manager o playera con logotipo para colaborador, mandil verde con logotipo, gafete con nombre y franquicia, pantalón de mezclilla azul, cinturón negro, zapato negro y calcetines obscuros.",
+      "Camisa o playera institucional, mandil de la sucursal, gafete de identificación, pantalón oscuro libre, zapato cerrado de cualquier color.",
+      "Gorra institucional, playera con logotipo, mandil verde, pantalón de mezclilla negro, cinturón y zapatos libres."
+    ],
+    correctIndex: 1,
+    explanation: "ESTÁNDAR DE SERVICIO: Gorra verde con logotipo Italian Coffe, red para el cabello, camisa con logotipo en caso de ser manager o playera con logotipo para colaborador, mandil verde con logotipo, gafete con nombre y franquicia, pantalón de mezclilla azul, cinturón negro, zapato negro y calcetines obscuros."
+  },
+  {
+    id: "servicio_03",
+    question: "¿Cuáles son los pilares para una buena labor de venta?",
+    options: [
+      "1.- Ofrecer siempre el tamaño grande, 2.- Insistir en la repostería, 3.- Apresurar el cobro.",
+      "1.- Saludar sonriendo, 2.- Memorizar los precios, 3.- Dar degustaciones de café, 4.- Ofrecer bolsas para llevar.",
+      "1.- Tener conocimiento de los productos, 2.- Hacer recomendación de Especialidades, 3.- Ofrecer complementos o sabores antes que bebidas grandes, 4.- Promover productos para llevar.",
+      "1.- Ofrecer las promociones del mes, 2.- Recomendar cambiar el tipo de leche, 3.- Sugerir el pan del día."
+    ],
+    correctIndex: 2,
+    explanation: "ESTÁNDAR DE SERVICIO: 1.- Tener conocimiento de los productos, 2.- Hacer recomendación de Especialidades, 3.- Ofrecer complementos o sabores antes que bebidas grandes, 4.- Promover productos para llevar."
+  },
+  {
+    id: "pos_01",
+    question: "¿Cómo se procesa el cobro con tarjeta en el punto de venta?",
+    options: [
+      "Presionando el botón de tarjeta en la columna vertical derecha",
+      "Dando clic en el icono de la terminal en el menú superior",
+      "Presionando el botón de tarjeta en la columna inferior",
+      "Seleccionando el menú de funciones especiales en pantalla"
+    ],
+    correctIndex: 2,
+    explanation: "PUNTO DE VENTA: Presionando el botón de tarjeta en la columna inferior"
+  },
+  {
+    id: "pos_02",
+    question: "¿Cuál botón funciona para separar mesas en su punto de venta?",
+    options: [
+      "Columna inferior primer botón de la izquierda",
+      "Columna vertical derecha primer botón superior",
+      "Columna inferior último botón de la derecha",
+      "Icono de plano de mesas en el panel central"
+    ],
+    correctIndex: 0,
+    explanation: "PUNTO DE VENTA: Columna inferior primer botón de la izquierda"
+  },
+  {
+    id: "pos_03",
+    question: "¿Cuál botón se utiliza para separar cuentas en su punto de venta?",
+    options: [
+      "Columna inferior segundo botón de la izquierda",
+      "Columna vertical derecha ultimo botón",
+      "Menú desplegable de herramientas de caja",
+      "Botón central de división de comandas"
+    ],
+    correctIndex: 1,
+    explanation: "PUNTO DE VENTA: Columna vertical derecha ultimo botón"
+  },
+  {
+    id: "pos_04",
+    question: "¿Cuál botón se utiliza para el cobro con efectivo en su punto de venta?",
+    options: [
+      "Botón de caja registradora en la barra de tareas",
+      "Tecla F5 del teclado físico",
+      "Icono de billete en columna inferior",
+      "Primer botón superior de la columna derecha"
+    ],
+    correctIndex: 2,
+    explanation: "PUNTO DE VENTA: Icono de billete en columna inferior"
+  },
+  {
+    id: "servicio_04",
+    question: "¿Cuántas charolas para labor de venta deben tener activas en sucursal?",
+    options: [
+      "2 charolas de repostería y 1 de panadería",
+      "1 charola mixta de alimentos para llevar",
+      "1 charola de repostería y 1 charola de Panadería",
+      "Las que asigne el supervisor según el flujo de la tarde"
+    ],
+    correctIndex: 2,
+    explanation: "ESTÁNDAR DE SERVICIO: 1 charola de repostería y 1 charola de Panadería"
+  },
+  {
+    id: "servicio_05",
+    question: "¿Cuál es la despedida oficial para el invitado?",
+    options: [
+      "Gracias por su compra, regrese pronto",
+      "Hasta luego, vuelva pronto a Italian Coffee",
+      "Que tenga una buena tarde, adiós",
+      "Vuelva pronto, recuerde visitarnos"
+    ],
+    correctIndex: 1,
+    explanation: "ESTÁNDAR DE SERVICIO: Hasta luego, vuelva pronto a Italian Coffee"
   }
 ];
 
