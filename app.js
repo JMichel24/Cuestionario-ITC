@@ -427,7 +427,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 36,
-    question: "¿Cuántas onzas de leche lleva un Iced latte?",
+    question: "¿Cuántas onzas de café lleva un Iced Coffee?",
     options: [
       "4 onzas el chico y 6 onzas el grande",
       "3 onzas el chico y 5 onzas el grande",
