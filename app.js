@@ -162,16 +162,16 @@ const QUESTIONS_DATABASE = [
     explanation: "Estándar de Americano Sencillo: Debe tener 6 onzas en total."
   },
   {
-    id: 14,
-    question: "¿Cuántas onzas en total lleva un Americano media carga?",
+    id: "preparacion_americano_mc",
+    question: "¿Cuál es el procedimiento de la preparación de un Americano media carga?",
     options: [
-      "3 onzas",
-      "4 onzas",
-      "6 onzas",
-      "8 onzas"
+      "Colocar media carga de café en filtro sencillo, usar taza de 12 onzas, prender el interruptor hasta llenar la taza a 10 onzas y presentar con galleta.",
+      "Colocar una carga de café en filtro de doble salida, colocar taza de 8 onzas debajo de una de las 2 salidas, prender el interruptor hasta obtener 6 onzas y apagar interruptor. Presentar con cuchara de Americano, 1 azúcar estuchada y 1 servilleta.",
+      "Colocar una carga en filtro de una salida, extraer un espresso corto de 1.5 onzas en taza de 8 onzas, rellenar con agua caliente hasta el borde.",
+      "Usar filtro de doble salida con carga completa, colocar taza de 12 onzas en el centro y extraer 8 onzas de café."
     ],
-    correctIndex: 2,
-    explanation: "Estándar de Americano Media Carga: Lleva 6 onzas en total."
+    correctIndex: 1,
+    explanation: "ESTÁNDAR DE PREPARACIÓN"
   },
   {
     id: 15,
@@ -378,16 +378,28 @@ const QUESTIONS_DATABASE = [
     explanation: "Estándar de Chocolate Italiano Frappe: 3 oz leche (sencillo) / 5 oz (grande), 2 disparos chocolate (sencillo) / 3 (grande), 135gr hielo (sencillo) / 180gr (grande), decorar vaso con jarabe de chocolate oscuro en zig-zag y terminar con decoración de corazón."
   },
   {
-    id: 32,
-    question: "¿Cuántas onzas de leche y cuántos disparos lleva un chocolate blanco frío y frappe?",
+    id: "preparacion_choc_blanco_frio",
+    question: "¿Cuántas onzas de leche y cuántos disparos lleva un chocolate blanco frío?",
     options: [
-      "3 onzas de leche y 3 disparos de chocolate blanco para el sencillo y 5 onzas de leche y 4 disparos de chocolate blanco para el grande",
-      "3 onzas de leche y 2 disparos de chocolate blanco para el sencillo y 5 onzas de leche y 3 disparos de chocolate blanco para el grande",
-      "4 onzas de leche y 3 disparos de chocolate blanco para el sencillo y 6 onzas de leche y 4 disparos de chocolate blanco para el grande",
-      "3 onzas de leche y 4 disparos de chocolate blanco para el sencillo y 5 onzas de leche y 5 disparos de chocolate blanco para el grande"
+      "Chico: 6 oz de leche, 2 tiros de chocolate y 60 gr de hielo; Grande: 8 oz de leche, 3 tiros de chocolate y 100 gr de hielo.",
+      "Chico: 5 onzas de leche, 3 tiros de chocolate blanco y 45 gr de hielo; Grande: 7 onzas de leche, 4 tiros de chocolate blanco y 90 gr de hielo.",
+      "Chico: 4 oz de leche, 3 tiros de chocolate y 90 gr de hielo; Grande: 6 oz de leche, 4 tiros de chocolate y 120 gr de hielo.",
+      "Chico: 5 oz de leche, 2 tiros de chocolate y 45 gr de hielo; Grande: 8 oz de leche, 4 tiros de chocolate y 90 gr de hielo."
+    ],
+    correctIndex: 1,
+    explanation: "ESTÁNDAR DE PREPARACIÓN"
+  },
+  {
+    id: "preparacion_choc_blanco_frappe",
+    question: "¿Cuántas onzas de leche y cuántos disparos lleva un chocolate blanco frappé?",
+    options: [
+      "Chico: 3 onzas de leche, 3 tiros de chocolate blanco y 135 gr de hielo; Grande: 5 onzas de leche, 4 tiros de chocolate blanco y 180 gr de hielo.",
+      "Chico: 4 oz de leche, 2 tiros de chocolate y 120 gr de hielo; Grande: 6 oz de leche, 3 tiros de chocolate y 160 gr de hielo.",
+      "Chico: 3 oz de leche, 2 tiros de chocolate y 150 gr de hielo; Grande: 5 oz de leche, 3 tiros de chocolate y 200 gr de hielo.",
+      "Chico: 2 oz de leche, 4 tiros de chocolate y 135 gr de hielo; Grande: 4 oz de leche, 5 tiros de chocolate y 180 gr de hielo."
     ],
     correctIndex: 0,
-    explanation: "Estándar de Chocolate Blanco Frío/Frappe: 3 oz leche / 3 disparos chocolate blanco para el sencillo; 5 oz leche / 4 disparos chocolate blanco para el grande."
+    explanation: "ESTÁNDAR DE PREPARACIÓN"
   },
   {
     id: 33,
@@ -450,16 +462,28 @@ const QUESTIONS_DATABASE = [
     explanation: "Estándar de Iced Latte: 2 oz leche + 2 oz café para chico; 3 oz leche + 3 oz café para grande."
   },
   {
-    id: 38,
-    question: "¿Cuántos disparos de concentrado de café sabor capuccino deslactosado lleva un capuccino deslactosado?",
+    id: "preparacion_capuccino_des_frio",
+    question: "¿Cuál es la correcta preparación de un capuccino deslactosado frío?",
     options: [
-      "1 disparo de 1 onza y 1 disparo de 0.5 onzas.",
-      "2 disparos de 1 onza y 1 disparo de 0.2 onzas.",
-      "1 disparo de 1 onza y 1 disparo de 0.3 onzas.",
-      "1 disparo de 1.5 onzas y 1 disparo de 0.3 onzas."
+      "Medir 8 oz de leche, agregar 2 disparos de concentrado, licuar por 10 segundos y agregar 60 gr de hielo.",
+      "Medir 9 onzas de leche en jarra medidora, agregar 1 disparo de concentrado de café frío deslactosado, licuar durante 5 segundos, agregar 45 gr de hielo.",
+      "Medir 10 oz de leche, agregar 1 disparo de concentrado regular, agitar manualmente y agregar 45 gr de hielo.",
+      "Medir 9 oz de leche deslactosada, extraer 1 espresso directo de la máquina y agregar 90 gr de hielo."
     ],
-    correctIndex: 2,
-    explanation: "Estándar de Capuccino Deslactosado: Requiere 1 disparo de 1 oz y 1 disparo de 0.3 oz."
+    correctIndex: 1,
+    explanation: "ESTÁNDAR DE PREPARACIÓN"
+  },
+  {
+    id: "preparacion_capuccino_des_frappe",
+    question: "¿Cuál es la correcta preparación de un capuccino deslactosado frappé?",
+    options: [
+      "Medir 3.3 onzas de leche en una jarra medidora, agregar 2 disparos, el primero de 1 onza (30 ml) el segundo de 0.3 onzas (10 ml) y agregar 180 gr de hielo.",
+      "Medir 4 oz de leche, agregar 1 disparo de 1.5 onzas de concentrado y agregar 150 gr de hielo.",
+      "Medir 3.5 oz de leche, agregar 2 disparos idénticos de 0.5 oz cada uno y agregar 180 gr de hielo.",
+      "Medir 5 oz de leche deslactosada, agregar 1 disparo de concentrado de 1 oz y agregar 200 gr de hielo."
+    ],
+    correctIndex: 0,
+    explanation: "ESTÁNDAR DE PREPARACIÓN"
   },
   {
     id: 39,
@@ -664,6 +688,18 @@ const QUESTIONS_DATABASE = [
     ],
     correctIndex: 1,
     explanation: "ESTÁNDAR DE SERVICIO: Hasta luego, vuelva pronto a Italian Coffee"
+  },
+  {
+    id: "servicio_despedida_oficial",
+    question: "¿Cuál es la despedida oficial?",
+    options: [
+      "Gracias por su compra, vuelva pronto a Italian Coffee",
+      "Hasta luego, que tenga un excelente día",
+      "Gracias por su visita a The Italian Coffee Company",
+      "Adiós, los esperamos de regreso"
+    ],
+    correctIndex: 0,
+    explanation: "ESTÁNDAR DE SERVICIO"
   }
 ];
 
