@@ -688,18 +688,6 @@ const QUESTIONS_DATABASE = [
     ],
     correctIndex: 1,
     explanation: "ESTÁNDAR DE SERVICIO: Hasta luego, vuelva pronto a Italian Coffee"
-  },
-  {
-    id: "servicio_despedida_oficial",
-    question: "¿Cuál es la despedida oficial?",
-    options: [
-      "Gracias por su compra, vuelva pronto a Italian Coffee",
-      "Hasta luego, que tenga un excelente día",
-      "Gracias por su visita a The Italian Coffee Company",
-      "Adiós, los esperamos de regreso"
-    ],
-    correctIndex: 0,
-    explanation: "ESTÁNDAR DE SERVICIO"
   }
 ];
 
