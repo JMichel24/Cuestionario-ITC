@@ -19,7 +19,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 2,
-    question: "¿Cuál es el total de onzas y espuma que lleva un capuccino sencillo?",
+    question: "¿Cuál es el total de onzas y espuma que lleva un capuccino caliente sencillo?",
     options: [
       "6 onzas en total: 1.5 onzas de café, 4.5 onzas de leche y 2.5 centímetros de espuma",
       "6 onzas en total: 4 onzas de café, 2 onzas de leche y 3 centímetros de espuma",
@@ -31,7 +31,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 3,
-    question: "¿Cuál es la correcta preparación de un espresso cortado con onzas?",
+    question: "¿Cuál es la correcta preparación de un espresso cortado en onzas?",
     options: [
       "0.75 onzas de café y 0.75 onzas de leche y 2.5 cm de espuma",
       "1.5 onzas de café y 0.75 onzas de leche y 2.5 cm de espuma",
@@ -45,13 +45,13 @@ const QUESTIONS_DATABASE = [
     id: 4,
     question: "¿Cuál es la correcta preparación de un espresso con panna?",
     options: [
-      "1.5 onzas de café y 2.5 cm de espuma",
-      "0.75 onzas de café y 1.5 cm de espuma",
-      "0.75 onzas de café y 3.5 cm de espuma",
-      "0.75 onzas de café y 2.5 cm de espuma"
+      "1.5 onzas de café y 2.5 cm de panna",
+      "0.75 onzas de café y 1.5 cm de panna",
+      "0.75 onzas de café y 3.5 cm de panna",
+      "0.75 onzas de café y 2.5 cm de panna"
     ],
     correctIndex: 3,
-    explanation: "Estándar de Espresso con Panna: 0.75 oz de café y 2.5 cm de espuma."
+    explanation: "Estándar de Espresso con Panna: 0.75 oz de café y 2.5 cm de panna."
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 9,
-    question: "¿Cuántos disparos necesita un capuccino con sabor vainilla sencillo?",
+    question: "¿Cuántos disparos necesita un capuccino caliente con sabor vainilla sencillo?",
     options: [
       "1 disparo",
       "2 disparos",
@@ -115,7 +115,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 10,
-    question: "¿Cuál es la correcta preparación de un capuccino con sabor rompope sencillo?",
+    question: "¿Cuál es la correcta preparación de un capuccino caliente con sabor rompope sencillo?",
     options: [
       "1 onza de rompope, 3 onzas de leche, 2 onzas de café, 3 cm de espuma, espolvorear cocoa al centro abundantemente.",
       "2 onzas de rompope, 2 onzas de leche, 2 onzas de café, 2 cm de espuma, espolvorear cocoa al centro abundantemente.",
@@ -127,7 +127,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 11,
-    question: "¿El capuccino con sabor Nutella lleva cocoa?",
+    question: "¿El capuccino caliente con Nutella lleva cocoa?",
     options: [
       "Sí, espolvoreada al centro abundantemente",
       "No",
@@ -135,19 +135,19 @@ const QUESTIONS_DATABASE = [
       "Solo si el cliente lo solicita explícitamente"
     ],
     correctIndex: 1,
-    explanation: "Estándar de Capuccino Nutella: No lleva cocoa para evitar solapar el sabor a avellana/chocolate de la Nutella."
+    explanation: "Estándar de Capuccino con Nutella: No lleva cocoa."
   },
   {
     id: 12,
-    question: "¿Cuál es el total de onzas que lleva un capuccino doble?",
+    question: "¿Cuál es el total de onzas que lleva un capuccino caliente doble?",
     options: [
-      "10 onzas en total y 2.5 cm de espuma",
-      "12 onzas en total y 1.5 cm de espuma",
-      "14 onzas en total y 3 cm de espuma",
-      "12 onzas en total y 3 cm de espuma"
+      "10 onzas en total y espuma firme sobre el nivel de la taza",
+      "12 onzas en total y espuma firme sobre el nivel de la taza",
+      "14 onzas en total y espuma firme sobre el nivel de la taza",
+      "16 onzas en total y espuma firme sobre el nivel de la taza"
     ],
     correctIndex: 3,
-    explanation: "Estándar de Capuccino Doble: 12 onzas en total y 3 cm de espuma."
+    explanation: "Estándar de Capuccino Doble: 12 onzas en total y espuma firme sobre el nivel de la taza."
   },
   {
     id: 13,
@@ -183,11 +183,11 @@ const QUESTIONS_DATABASE = [
       "4 onzas de café, 1 onza de leche"
     ],
     correctIndex: 0,
-    explanation: "Estándar de Americano Cortado: 4 oz de café y 2 oz de leche."
+    explanation: "Estándar de Americano Cortado: 4 oz de café y 2 oz de leche, agregar una cucharada de espuma."
   },
   {
     id: 16,
-    question: "¿Cuál es la correcta preparación de un café latte sencillo?",
+    question: "¿Cuál es la correcta preparación de un café latte caliente sencillo?",
     options: [
       "se presenta en taza de cerámica, 4 onzas de leche y 2 onzas de café",
       "se presenta en copa de cristal, 2 onzas de leche y 4 onzas de café",
@@ -202,12 +202,12 @@ const QUESTIONS_DATABASE = [
     question: "¿Cuál es la correcta preparación de un Moka caliente con panna sencillo?",
     options: [
       "3 onzas de café, 2 onzas de chocolate italiano y 3 cm de panna, la decoración debe ser en zig-zag con jarabe de chocolate obscuro",
-      "2 onzas de café, 3 onzas de chocolate italiano y 1.5 cm de espuma, la decoración debe ser en forma de cruz con jarabe de chocolate blanco",
-      "2 onzas de café, 3 onzas de chocolate italiano y 3 cm de espuma, la decoración debe ser en forma circular con jarabe de chocolate obscuro",
-      "1 onza de café, 4 onzas de chocolate italiano y 3 cm de espuma, la decoración debe ser en forma circular con jarabe de caramelo"
+      "2 onzas de café, 3 onzas de chocolate italiano y 1.5 cm de panna, la decoración debe ser en forma de cruz con jarabe de chocolate blanco",
+      "2 onzas de café, 3 onzas de chocolate italiano y 3 cm de panna, la decoración debe ser en forma circular con jarabe de chocolate obscuro",
+      "1 onza de café, 4 onzas de chocolate italiano y 3 cm de panna, la decoración debe ser en forma circular con jarabe de caramelo"
     ],
     correctIndex: 2,
-    explanation: "Estándar de Moka Caliente Sencillo con Panna: 2 oz café, 3 oz chocolate italiano, 3 cm de espuma y decoración circular de jarabe de chocolate oscuro."
+    explanation: "Estándar de Moka Caliente Sencillo con Panna: 2 oz café, 3 oz chocolate italiano, 3 cm de panna y decoración circular de jarabe de chocolate oscuro."
   },
   {
     id: 18,
@@ -223,7 +223,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 19,
-    question: "¿Cuál es la correcta preparación de un chocolate italiano?",
+    question: "¿Cuál es la correcta preparación de un chocolate italiano caliente?",
     options: [
       "Medir 16 onzas de leche en una jarra de acero inoxidable de 24 onzas, colocar 2 disparos de chocolate italiano líquido, introducir la punta de la lanceta para espumar y calentar.",
       "Medir 12 onzas de leche en una jarra de acero inoxidable de 32 onzas, colocar 4 disparos de chocolate italiano líquido, introducir la punta de la lanceta para espumar y calentar.",
@@ -259,7 +259,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 22,
-    question: "¿Cuántas onzas en total de agua debe tener un té sencillo y cuántos sobres debe llevar?",
+    question: "¿Cuántas onzas en total de agua debe tener un té caliente sencillo y cuántos sobres debe llevar?",
     options: [
       "1 sobre de té y 8 onzas de agua.",
       "1 sobre de té y 6 onzas de agua.",
@@ -283,7 +283,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 24,
-    question: "¿Cuál es la preparación correcta de una mezcla de capuccino?",
+    question: "¿Cuál es la preparación correcta de una mezcla de capuccino frío?",
     options: [
       "5 litros de leche y 1 bolsa de concentrado.",
       "4 litros de leche y 1 bolsa de concentrado.",
@@ -303,11 +303,11 @@ const QUESTIONS_DATABASE = [
       "3cm o 3 vueltas y media."
     ],
     correctIndex: 2,
-    explanation: "Estándar de Frappe Panna: Lleva exactamente 3 cm de panna, equivalentes a 2 vueltas y media de crema batida."
+    explanation: "Estándar de Frappe Panna: Lleva exactamente 3 cm de panna, equivalentes a 2 vueltas y media de panna."
   },
   {
     id: 26,
-    question: "¿Cuántos disparos de sabor lleva un capuccino con sabor (Cajeta, Caramelli)?",
+    question: "¿Cuántos disparos de sabor lleva un capuccino frío o frappé con sabor (Cajeta, Caramelli)?",
     options: [
       "1 para el chico, 2 para el grande",
       "2 para el chico, 4 para el grande",
@@ -319,7 +319,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 27,
-    question: "¿Cuál es la correcta preparación de un capuccino con Nutella?",
+    question: "¿Cuál es la correcta preparación de un capuccino frío o frappé con Nutella?",
     options: [
       "verter capuccino frappe o frío en vaso de licuadora midiendo 9 onzas para el chico y 13 para el grande, calentar el medidor cónico con agua caliente, colocar 3/4 de onza para bebida chica y 1 onza para bebida grande, vaciar en licuadora y mezclar durante 10 segundos, colocar en vaso chico o grande, colocar panna hasta 3 cm y decorar en forma de zig-zag.",
       "verter capuccino frappe o frío en vaso de licuadora midiendo 8 onzas para el chico y 12 para el grande, calentar el medidor cónico con agua caliente, colocar 1/2 onza para bebida chica y 1 onza para bebida grande, vaciar en licuadora y mezclar durante 10 segundos, colocar en vaso chico o grande, colocar panna hasta 2 cm y decorar en forma de zig-zag.",
@@ -334,12 +334,12 @@ const QUESTIONS_DATABASE = [
     question: "¿Qué es el Moka?",
     options: [
       "Café con crema de avellanas",
-      "Café con leche y chocolate",
+      "Café con leche y chocolate Italiano",
       "Café americano con chocolate en polvo",
       "Chocolate caliente con crema batida y canela"
     ],
     correctIndex: 1,
-    explanation: "Estándar de Receta Moka: Mezcla de café, leche y chocolate."
+    explanation: "Estándar de Receta Moka: Mezcla de café, leche y chocolate Italiano."
   },
   {
     id: 29,
@@ -348,14 +348,14 @@ const QUESTIONS_DATABASE = [
       "Café con agua",
       "Café con leche y chocolate",
       "Leche caliente espumada con canela",
-      "Café con leche"
+      "Café con leche y espuma"
     ],
     correctIndex: 3,
-    explanation: "Estándar de Receta Capuccino: Café con leche."
+    explanation: "Estándar de Receta Capuccino: Café con leche y espuma."
   },
   {
     id: 30,
-    question: "¿Cuántas galletas oreo lleva un capuccino frioreo?",
+    question: "¿Cuántas galletas oreo lleva un capuccino frioreo frío o frappé?",
     options: [
       "1 galleta oreo para el chico y 2 galletas oreo para el grande",
       "2 galletas oreo para el chico y 4 galletas oreo para el grande",
@@ -427,7 +427,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 36,
-    question: "¿Cuántas onzas de café lleva un Iced Coffee?",
+    question: "¿Cuántas onzas de café lleva un Iced Coffee chico y grande?",
     options: [
       "4 onzas el chico y 6 onzas el grande",
       "3 onzas el chico y 5 onzas el grande",
@@ -435,11 +435,11 @@ const QUESTIONS_DATABASE = [
       "5 onzas el chico y 7 onzas el grande"
     ],
     correctIndex: 0,
-    explanation: "Estándar de Leche Iced Coffee: 4 oz para el tamaño chico y 6 oz para el tamaño grande."
+    explanation: "Estándar de  Iced Coffee: 4 oz para el tamaño chico y 6 oz para el tamaño grande."
   },
   {
     id: 37,
-    question: "¿Cuántas onzas de café y leche lleva un Iced Latte?",
+    question: "¿Cuántas onzas de café y leche lleva un Iced Latte chico y grande?",
     options: [
       "3 onzas de leche y 2 onzas de café para el chico y 4 onzas de leche y 3 de café para el grande",
       "2 onzas de leche y 2 onzas de café para el chico y 3 onzas de leche y 3 de café para el grande",
@@ -574,12 +574,12 @@ const QUESTIONS_DATABASE = [
     question: "¿Cuál es el uniforme completo y correcto?",
     options: [
       "Playera con logotipo, mandil verde, pantalón de mezclilla azul y tenis negros cómodos.",
-      "Gorra verde con logotipo Italian Coffe, red para el cabello, camisa con logotipo en caso de ser manager o playera con logotipo para colaborador, mandil verde con logotipo, gafete con nombre y franquicia, pantalón de mezclilla azul, cinturón negro, zapato negro y calcetines obscuros.",
+      "Gorra verde con logotipo Italian Coffe, red para el cabello, camisa con logotipo en caso de ser manager o playera con logotipo para colaborador, mandil verde con logotipo, gafete con nombre y franquicia, pantalón de mezclilla azul, cinturón negro, calzado completamente negro y calcetines obscuros.",
       "Camisa o playera institucional, mandil de la sucursal, gafete de identificación, pantalón oscuro libre, zapato cerrado de cualquier color.",
       "Gorra institucional, playera con logotipo, mandil verde, pantalón de mezclilla negro, cinturón y zapatos libres."
     ],
     correctIndex: 1,
-    explanation: "ESTÁNDAR DE SERVICIO: Gorra verde con logotipo Italian Coffe, red para el cabello, camisa con logotipo en caso de ser manager o playera con logotipo para colaborador, mandil verde con logotipo, gafete con nombre y franquicia, pantalón de mezclilla azul, cinturón negro, zapato negro y calcetines obscuros."
+    explanation: "ESTÁNDAR DE SERVICIO: Gorra verde con logotipo Italian Coffe, red para el cabello, camisa con logotipo en caso de ser manager o playera con logotipo para colaborador, mandil verde con logotipo, gafete con nombre y franquicia, pantalón de mezclilla azul, cinturón negro, calzado completamente negro y calcetines obscuros."
   },
   {
     id: "servicio_03",
