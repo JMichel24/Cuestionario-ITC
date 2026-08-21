@@ -127,7 +127,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 11,
-    question: "¿El capuccino caliente con Nutella lleva cocoa?",
+    question: "¿El capuccino caliente con NUTELLA lleva cocoa?",
     options: [
       "Sí, espolvoreada al centro abundantemente",
       "No",
@@ -135,7 +135,7 @@ const QUESTIONS_DATABASE = [
       "Solo si el cliente lo solicita explícitamente"
     ],
     correctIndex: 1,
-    explanation: "Estándar de Capuccino con Nutella: No lleva cocoa."
+    explanation: "Estándar de Capuccino con NUTELLA: No lleva cocoa."
   },
   {
     id: 12,
@@ -295,15 +295,15 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 25,
-    question: "¿Cuántos centímetros de panna lleva un frappe?",
+    question: "¿Cuántas vueltas de panna lleva un frappe?",
     options: [
-      "2cm o 1 vuelta y media.",
-      "4cm o 3 vueltas completas.",
-      "3cm o 2 vueltas y media.",
-      "3cm o 3 vueltas y media."
+      "1 vuelta y media.",
+      "3 vueltas completas.",
+      "2 vueltas y media.",
+      "3 vueltas y media."
     ],
     correctIndex: 2,
-    explanation: "Estándar de Frappe Panna: Lleva exactamente 3 cm de panna, equivalentes a 2 vueltas y media de panna."
+    explanation: "Estándar de Frappe Panna: Lleva exactamente 2 vueltas y media de panna."
   },
   {
     id: 26,
@@ -319,7 +319,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 27,
-    question: "¿Cuál es la correcta preparación de un capuccino frío o frappé con Nutella?",
+    question: "¿Cuál es la correcta preparación de un capuccino frío o frappé con NUTELLA?",
     options: [
       "verter capuccino frappe o frío en vaso de licuadora midiendo 9 onzas para el chico y 13 para el grande, calentar el medidor cónico con agua caliente, colocar 3/4 de onza para bebida chica y 1 onza para bebida grande, vaciar en licuadora y mezclar durante 10 segundos, colocar en vaso chico o grande, colocar panna hasta 3 cm y decorar en forma de zig-zag.",
       "verter capuccino frappe o frío en vaso de licuadora midiendo 8 onzas para el chico y 12 para el grande, calentar el medidor cónico con agua caliente, colocar 1/2 onza para bebida chica y 1 onza para bebida grande, vaciar en licuadora y mezclar durante 10 segundos, colocar en vaso chico o grande, colocar panna hasta 2 cm y decorar en forma de zig-zag.",
@@ -327,7 +327,7 @@ const QUESTIONS_DATABASE = [
       "verter capuccino frappe o frío en vaso de licuadora midiendo 10 onzas para el chico y 13 para el grande, calentar el medidor cónico con agua caliente, colocar 3/4 de onza para bebida chica y 1.25 onzas para bebida grande, vaciar en licuadora y mezclar durante 10 segundos, colocar en vaso chico o grande, colocar panna hasta 4 cm y decorar en forma circular."
     ],
     correctIndex: 0,
-    explanation: "Estándar de Capuccino con Nutella: Medir 9 oz (chico) / 13 oz (grande) de capuccino frappe/frío en licuadora, calentar cono con agua, 3/4 oz (chico) / 1 oz (grande) de Nutella, licuar 10s, panna a 3cm y decorar en zig-zag."
+    explanation: "Estándar de Capuccino con NUTELLA: Medir 9 oz (chico) / 13 oz (grande) de capuccino frappe/frío en licuadora, calentar cono con agua, 3/4 oz (chico) / 1 oz (grande) de NUTELLA, licuar 10s, panna a 3cm y decorar en zig-zag."
   },
   {
     id: 28,
@@ -417,13 +417,13 @@ const QUESTIONS_DATABASE = [
     id: 34,
     question: "¿Cuántas bolsas de té y cuánta azúcar lleva un té frappe?",
     options: [
-      "3 bolsas de té y 4 estuches de 2 azucarillos.",
-      "4 bolsas de té y 5 estuches de 2 azucarillos.",
-      "4 bolsas de té y 6 estuches de 2 azucarillos.",
-      "5 bolsas de té y 8 estuches de 2 azucarillos."
+      "3 bolsas de té y 4 estuches de 2 azúcares.",
+      "4 bolsas de té y 5 estuches de 2 azúcares.",
+      "4 bolsas de té y 6 estuches de 2 azúcares.",
+      "5 bolsas de té y 8 estuches de 2 azúcares."
     ],
     correctIndex: 2,
-    explanation: "Estándar de Té Frappe: Se prepara utilizando 4 bolsas de té y 6 estuches de 2 azucarillos."
+    explanation: "Estándar de Té Frappe: Se prepara utilizando 4 bolsas de té y 6 estuches de 2 azúcares."
   },
   {
     id: 35,
@@ -559,7 +559,7 @@ const QUESTIONS_DATABASE = [
   },
   {
     id: 45,
-    question: "¿Cuántos gramos de Nutella lleva un Croissant de Nutella?",
+    question: "¿Cuántos gramos de NUTELLA lleva un Croissant de NUTELLA?",
     options: [
       "30 gramos",
       "40 gramos",
@@ -567,11 +567,11 @@ const QUESTIONS_DATABASE = [
       "60 gramos"
     ],
     correctIndex: 1,
-    explanation: "Estándar de Croissant de Nutella: Lleva exactamente 40 gramos de Nutella."
+    explanation: "Estándar de Croissant de NUTELLA: Lleva exactamente 40 gramos de NUTELLA."
   },
   {
     id: 46,
-    question: "¿Cuántos gramos de Nutella lleva un pay con Nutella?",
+    question: "¿Cuántos gramos de NUTELLA lleva un pay con NUTELLA?",
     options: [
       "20 gramos",
       "15 gramos",
@@ -579,7 +579,7 @@ const QUESTIONS_DATABASE = [
       "30 gramos"
     ],
     correctIndex: 0,
-    explanation: "Estándar de Pay con Nutella: Lleva exactamente 20 gramos de Nutella."
+    explanation: "Estándar de Pay con NUTELLA: Lleva exactamente 20 gramos de NUTELLA."
   },
   {
     id: "servicio_01",
